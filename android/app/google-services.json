@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "89511450241",
+    "project_id": "bhoosaarthi",
+    "storage_bucket": "bhoosaarthi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89511450241:android:12c876a549d49a887a9f80",
+        "android_client_info": {
+          "package_name": "com.anshul.bhoo_saarthi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd60DUR8INVbsgzKQOo-m4lvNGJyNwAmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
