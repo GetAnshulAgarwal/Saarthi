@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class BuyerLoginPage extends StatefulWidget {
-  const BuyerLoginPage({Key? key}) : super(key: key);
+  const BuyerLoginPage({super.key});
 
   @override
   _BuyerLoginPageState createState() => _BuyerLoginPageState();
@@ -33,9 +33,7 @@ class _BuyerLoginPageState extends State<BuyerLoginPage> {
         MaterialPageRoute(builder: (context) => const HomePage()),
       );
     } on FirebaseAuthException catch (e) {
-      setState(() {
-        _errorMessage = e.message;
-      });
+      setState(() {});
     } finally {
       setState(() {
         _isLoading = false;

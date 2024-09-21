@@ -22,7 +22,8 @@ class NavigationMenu extends StatelessWidget {
               controller.selectedIndex.value = index,
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'home'),
-            NavigationDestination(icon: Icon(Iconsax.crop), label: 'crop'),
+            NavigationDestination(
+                icon: Icon(Iconsax.book_saved), label: 'contract'),
             NavigationDestination(icon: Icon(Iconsax.wallet), label: 'wallet'),
             NavigationDestination(
                 icon: Icon(Iconsax.profile), label: 'profile'),
@@ -30,7 +31,7 @@ class NavigationMenu extends StatelessWidget {
         ),
       ),
       body: Obx(
-        () => controller.screens[controller.selectedIndex.value],
+        () => controller.pages[controller.selectedIndex.value],
       ),
     );
   }
@@ -39,7 +40,7 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [
+  final pages = [
     const HomePage(),
     const CropRequestPage(),
     const PaymentHistoryPage(),

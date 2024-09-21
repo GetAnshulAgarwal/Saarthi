@@ -19,44 +19,6 @@ class _CropRequestPageState extends State<CropRequestPage> {
   String _cropType = '';
   int _quantity = 0;
 
-  int _selectedIndex =
-      2; // To keep track of the selected index for Crop Request Page
-
-  void _onItemTapped(int index) {
-    if (index == _selectedIndex) return; // Avoid unnecessary rebuilds
-
-    setState(() {
-      _selectedIndex = index;
-    });
-
-    Widget page;
-
-    switch (index) {
-      case 0:
-        page = const MarketplacePage();
-        break;
-      case 1:
-        page = const ContractHistoryPage(); // Use ContractHistoryPage
-        break;
-      case 2:
-        page = const CropRequestPage(); // Stay on CropRequestPage
-        break;
-      case 3:
-        page = const PaymentHistoryPage();
-        break;
-      case 4:
-        page = const ProfilePage();
-        break;
-      default:
-        page = const MarketplacePage(); // Fallback
-    }
-
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => page),
-    );
-  }
-
   void _submitRequest() {
     if (_formKey.currentState!.validate()) {
       // Handle form submission logic here (e.g., send request to backend)
@@ -169,39 +131,6 @@ class _CropRequestPageState extends State<CropRequestPage> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex, // Update currentIndex
-        backgroundColor: Colors.white, // Set the background to white
-        type: BottomNavigationBarType.fixed, // Fixed type for equal spacing
-        elevation: 10, // Slight elevation for a subtle shadow effect
-        showSelectedLabels: true, // Show labels
-        showUnselectedLabels: false, // Hide unselected labels
-        selectedItemColor: Colors.black, // Color of the selected icon
-        unselectedItemColor: Colors.grey, // Color of the unselected icons
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.home), // Home icon
-            label: 'Home', // Label for home
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.bag), // Services icon
-            label: 'Bag', // Label for services
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.addUser), // Schedule icon
-            label: 'Crop Request', // Label for schedule
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.wallet), // Orders icon
-            label: 'Wallet', // Label for wallet
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.profile), // Profile icon
-            label: 'Profile', // Label for profile
-          ),
-        ],
-        onTap: _onItemTapped, // Update onTap method
       ),
     );
   }

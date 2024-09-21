@@ -4,6 +4,7 @@ import 'package:bhoo_saarthi/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:bhoo_saarthi/navigation_menu.dart';
 import 'marketplace_page.dart'; // Import the MarketplacePage
 import 'payment_history_page.dart'; // Import the PaymentHistoryPage
 
@@ -15,59 +16,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0; // To keep track of the selected index
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-
-    switch (index) {
-      case 0:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const HomePage()),
-        );
-        break;
-      case 1:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const MarketplacePage()),
-        );
-        // Handle Services navigation
-        break;
-      case 2:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const ContractHistoryPage()),
-        );
-        // Handle Schedule navigation
-        break;
-      case 3:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const CropRequestPage()),
-        );
-        break;
-      case 4:
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  const PaymentHistoryPage()), // Navigate to ProfilePage
-        );
-        break;
-      case 5:
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  const ProfilePage()), // Navigate to ProfilePage
-        );
-        break;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -205,39 +153,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex, // Update currentIndex
-        backgroundColor: Colors.white, // Set the background to white
-        type: BottomNavigationBarType.fixed, // Fixed type for equal spacing
-        elevation: 10, // Slight elevation for a subtle shadow effect
-        showSelectedLabels: true, // Show labels
-        showUnselectedLabels: false, // Hide labels
-        selectedItemColor: Colors.black, // Color of the selected icon
-        unselectedItemColor: Colors.grey, // Color of the unselected icons
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.home), // Home icon
-            label: 'home', // No label
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.bag), // Services icon
-            label: 'bag', // No label
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.addUser), // Schedule icon
-            label: 'Crop Request', // No label
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.wallet), // Orders icon
-            label: 'wallet', // No label
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.profile), // Profile icon
-            label: 'profile', // No label
-          ),
-        ],
-        onTap: _onItemTapped, // Update onTap method
-      ),
+
+      // Adding the common navigation bar
+      bottomNavigationBar:
+          NavigationMenu(), // Use the created NavigationMenu widget here
     );
   }
 }

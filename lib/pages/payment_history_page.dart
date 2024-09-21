@@ -1,7 +1,6 @@
 import 'package:bhoo_saarthi/pages/crop_request_page.dart';
 import 'package:bhoo_saarthi/pages/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'contract_page.dart';
 import 'marketplace_page.dart'; // Import the MarketplacePage
 
@@ -126,40 +125,6 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
             ),
           );
         },
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex:
-            _selectedIndex, // Update currentIndex to PaymentHistoryPage
-        backgroundColor: Colors.white, // Set the background to white
-        type: BottomNavigationBarType.fixed, // Fixed type for equal spacing
-        elevation: 10, // Slight elevation for a subtle shadow effect
-        showSelectedLabels: true, // Show labels
-        showUnselectedLabels: false, // Hide labels
-        selectedItemColor: Colors.black, // Color of the selected icon
-        unselectedItemColor: Colors.grey, // Color of the unselected icons
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.home), // Home icon
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.bag), // Services icon
-            label: 'Bag',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.addUser), // Schedule icon
-            label: 'Crop Request',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.wallet), // Payment History icon
-            label: 'Wallet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(IconlyLight.profile), // Profile icon
-            label: 'Profile',
-          ),
-        ],
-        onTap: _onItemTapped, // Handle bottom navigation tap
       ),
     );
   }
