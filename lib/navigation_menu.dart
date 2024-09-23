@@ -1,5 +1,6 @@
 import 'package:bhoo_saarthi/pages/crop_request_page.dart';
 import 'package:bhoo_saarthi/pages/homescreen_page.dart';
+import 'package:bhoo_saarthi/pages/marketplace_page.dart';
 import 'package:bhoo_saarthi/pages/payment_history_page.dart';
 import 'package:bhoo_saarthi/pages/profile.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final pages = [
-    const HomePage(),
+    const MarketplacePage(),
     const CropRequestPage(),
     const PaymentHistoryPage(),
     const ProfilePage()

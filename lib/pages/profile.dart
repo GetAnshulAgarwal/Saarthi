@@ -1,4 +1,5 @@
 import 'package:bhoo_saarthi/pages/crop_request_page.dart';
+import 'package:bhoo_saarthi/pages/homescreen_page.dart';
 import 'package:bhoo_saarthi/pages/marketplace_page.dart'; // Import the MarketplacePage
 import 'package:bhoo_saarthi/pages/payment_history_page.dart'; // Import the PaymentHistoryPage
 import 'package:bhoo_saarthi/pages/onboarding_page.dart'; // Import your OnboardingPage or similar page
@@ -40,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      const MarketplacePage()), // Navigate to home screen
+                      const HomePage()), // Navigate to home screen
             );
           },
         ),

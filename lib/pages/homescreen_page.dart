@@ -1,12 +1,12 @@
 import 'package:bhoo_saarthi/pages/contract_page.dart';
-import 'package:bhoo_saarthi/pages/crop_request_page.dart';
+import 'package:bhoo_saarthi/pages/payment_history_page.dart';
 import 'package:bhoo_saarthi/pages/profile.dart';
+import 'package:bhoo_saarthi/pages/wallet_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:bhoo_saarthi/navigation_menu.dart';
-import 'marketplace_page.dart'; // Import the MarketplacePage
-import 'payment_history_page.dart'; // Import the PaymentHistoryPage
+import 'crop_request_page.dart';
+import 'marketplace_page.dart';
+import 'reward_page.dart'; // Import the Rewards page
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -35,6 +35,100 @@ class _HomePageState extends State<HomePage> {
             },
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            // Drawer Header
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.white,
+                    child: Icon(Icons.person, size: 40),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Anshul Agarwal',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                  const Text(
+                    'anshulagarwal136@gmail.com',
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
+                ],
+              ),
+            ),
+
+            // Navigation Items
+            ListTile(
+              leading: const Icon(Icons.storefront),
+              title: const Text('Marketplace'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MarketplacePage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.add),
+              title: const Text('Crop Request'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CropRequestPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.card_giftcard),
+              title: const Text('Rewards'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RewardSectionPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.bookmark),
+              title: const Text('Contracts'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ContractPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.account_balance_wallet),
+              title: const Text('Wallet'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WalletPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('Profile'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfilePage()),
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: Column(
         children: [
@@ -153,10 +247,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-
-      // Adding the common navigation bar
-      bottomNavigationBar:
-          NavigationMenu(), // Use the created NavigationMenu widget here
     );
   }
 }

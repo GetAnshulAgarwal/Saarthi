@@ -45,8 +45,12 @@ dependencies:
   carousel_slider:
   iconsax: ^0.0.8
   getxbottombar: ^0.0.1
-
-
+  get:
+  fl_chart:
+  url_launcher:
+  flutter_pdfview:
+  dio:
+  path_provider:
 
 dev_dependencies:
   flutter_test:
@@ -72,7 +76,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/contract/englsih.pdf
     - assets/banner1.jpg
+    - assets/green field.jpg
+    - assets/Barley.webp
+    - assets/maize.webp
+    - assets/rice.jpg
     - assets/banner2.jpg
     - assets/banner3.jpg
     - assets/banner4.jpg

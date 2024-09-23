@@ -1,3 +1,4 @@
+import 'package:bhoo_saarthi/navigation_menu.dart';
 import 'package:bhoo_saarthi/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -53,24 +54,49 @@ class _MarketplacePageState extends State<MarketplacePage> {
               child: ListView(
                 children: [
                   CropItem(
-                    imagePath: 'assets/banner1.jpg',
+                    imagePath: 'assets/banner5.jpg',
                     cropName: 'Wheat',
-                    cropDetails: 'RS 45\nbarley',
+                    cropDetails: 'RS 45\n',
                   ),
                   CropItem(
-                    imagePath: 'assets/banner2.jpg',
+                    imagePath: 'assets/rice.jpg',
                     cropName: 'Rice',
-                    cropDetails: 'RS 45\nbarley',
+                    cropDetails: 'RS 45\n',
                   ),
                   CropItem(
-                    imagePath: 'assets/banner3.jpg',
+                    imagePath: 'assets/maize.webp',
                     cropName: 'Maize',
-                    cropDetails: 'RS 45\nbarley',
+                    cropDetails: 'RS 45\n',
                   ),
                   CropItem(
-                    imagePath: 'assets/banner4.jpg',
+                    imagePath: 'assets/Barley.webp',
                     cropName: 'Barley',
-                    cropDetails: 'RS 45\nbarley ',
+                    cropDetails: 'RS 45\n ',
+                  ),
+                  CropItem(
+                    imagePath: 'assets/Barley.webp',
+                    cropName: 'Barley',
+                    cropDetails: 'RS 45\n ',
+                  ),
+                  CropItem(
+                    imagePath: 'assets/Barley.webp',
+                    cropName: 'Barley',
+                    cropDetails: 'RS 45\n ',
+                  ),
+                  CropItem(
+                    imagePath: 'assets/Barley.webp',
+                    cropName: 'Barley',
+                    cropDetails: 'RS 45\n ',
+                  ),
+                  CropItem(
+                    imagePath: 'assets/Barley.webp',
+                    cropName: 'Barley',
+                    cropDetails: 'RS 45\n ',
+                  ),
+                  CropItem(
+                    imagePath: 'assets/Barley.webp',
+                    cropName: 'Barley',
+                    cropDetails: 'RS 45\n ',
                   ),
                   // Add more CropItems as needed
                 ],

@@ -1,8 +1,5 @@
-import 'package:bhoo_saarthi/pages/crop_request_page.dart';
-import 'package:bhoo_saarthi/pages/profile.dart';
 import 'package:flutter/material.dart';
-import 'contract_page.dart';
-import 'marketplace_page.dart'; // Import the MarketplacePage
+import 'homescreen_page.dart';
 
 class PaymentHistoryPage extends StatefulWidget {
   const PaymentHistoryPage({Key? key}) : super(key: key);
@@ -23,41 +20,6 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
     {'deal': 'Deal 5', 'status': 'Pending'},
   ];
 
-  void _onItemTapped(int index) {
-    if (index == _selectedIndex) return; // Avoid unnecessary rebuilds
-
-    setState(() {
-      _selectedIndex = index;
-    });
-
-    Widget page;
-
-    switch (index) {
-      case 0:
-        page = const MarketplacePage();
-        break;
-      case 1:
-        page = const ContractHistoryPage(); // Use ContractHistoryPage
-        break;
-      case 2:
-        page = const CropRequestPage(); // CropRequestPage
-        break;
-      case 3:
-        page = const PaymentHistoryPage(); // Stay on Payment History Page
-        break;
-      case 4:
-        page = const ProfilePage();
-        break;
-      default:
-        page = const MarketplacePage(); // Fallback
-    }
-
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => page),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +38,7 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      const MarketplacePage()), // Navigate to home screen
+                      const HomePage()), // Navigate to home screen
             );
           },
         ),
