@@ -1,8 +1,7 @@
-import 'package:bhoo_saarthi/pages/crop_request_page.dart';
-import 'package:bhoo_saarthi/pages/homescreen_page.dart';
-import 'package:bhoo_saarthi/pages/marketplace_page.dart';
-import 'package:bhoo_saarthi/pages/payment_history_page.dart';
-import 'package:bhoo_saarthi/pages/profile.dart';
+import 'package:bhoo_saarthi/pages/Buyer/crop_request_page.dart';
+import 'package:bhoo_saarthi/pages/Buyer/marketplace_page.dart';
+import 'package:bhoo_saarthi/pages/Buyer/payment_history_page.dart';
+import 'package:bhoo_saarthi/pages/Buyer/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';

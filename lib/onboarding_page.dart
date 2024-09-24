@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
-import 'Buyer/login_page.dart';
-import 'Farmer/login_page.dart'; // Buyer login page
+import 'pages/Buyer/login_page.dart';
+import 'pages/Farmer/login_page.dart'; // Buyer login page
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});

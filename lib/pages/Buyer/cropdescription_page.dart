@@ -1,5 +1,5 @@
+import 'package:bhoo_saarthi/pages/Buyer/provider_page.dart';
 import 'package:flutter/material.dart';
-import 'provider_page.dart'; // Import the provider page
 
 class CropDescriptionPage extends StatefulWidget {
   final String imagePath;

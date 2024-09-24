@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'provider_details_page.dart';
 import 'chat_page.dart';
+import 'provider_details_page.dart';
 
 class ProviderCard extends StatefulWidget {
   final String name;

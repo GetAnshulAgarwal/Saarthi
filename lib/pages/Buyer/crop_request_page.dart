@@ -1,10 +1,8 @@
-import 'package:bhoo_saarthi/pages/homescreen_page.dart';
+import 'package:bhoo_saarthi/pages/Buyer/homescreen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'contract_page.dart'; // Import the ContractHistoryPage
-import 'marketplace_page.dart'; // Import the MarketplacePage
 import 'payment_history_page.dart'; // Import the PaymentHistoryPage
-import 'profile.dart'; // Import the ProfilePage
 
 class CropRequestPage extends StatefulWidget {
   const CropRequestPage({Key? key}) : super(key: key);

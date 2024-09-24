@@ -1,10 +1,7 @@
 import 'package:bhoo_saarthi/navigation_menu.dart';
-import 'package:bhoo_saarthi/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'contract_page.dart';
-import 'crop_request_page.dart';
-import 'cropitem_page.dart'; // Import the CropDescriptionPage
+import 'cropitem_page.dart';
 import 'payment_history_page.dart'; // Import your Payment History page
 
 class MarketplacePage extends StatefulWidget {

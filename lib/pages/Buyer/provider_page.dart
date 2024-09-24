@@ -1,4 +1,4 @@
-import 'package:bhoo_saarthi/pages/provider_card_page.dart';
+import 'package:bhoo_saarthi/pages/Buyer/provider_card_page.dart';
 import 'package:flutter/material.dart';
 
 class ProviderScreen extends StatelessWidget {

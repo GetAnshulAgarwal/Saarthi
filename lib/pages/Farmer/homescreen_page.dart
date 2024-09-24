@@ -1,12 +1,11 @@
-import 'package:bhoo_saarthi/pages/contract_page.dart';
-import 'package:bhoo_saarthi/pages/payment_history_page.dart';
-import 'package:bhoo_saarthi/pages/profile.dart';
-import 'package:bhoo_saarthi/pages/wallet_page.dart';
+import 'package:bhoo_saarthi/pages/Farmer/contract_page.dart';
+import 'package:bhoo_saarthi/pages/Farmer/crop_request_page.dart';
+import 'package:bhoo_saarthi/pages/Farmer/marketplace_page.dart';
+import 'package:bhoo_saarthi/pages/Farmer/profile.dart';
+import 'package:bhoo_saarthi/pages/Farmer/reward_page.dart';
+import 'package:bhoo_saarthi/pages/Farmer/wallet_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'crop_request_page.dart';
-import 'marketplace_page.dart';
-import 'reward_page.dart'; // Import the Rewards page
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

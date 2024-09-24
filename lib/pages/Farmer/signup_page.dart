@@ -1,4 +1,4 @@
-import 'package:bhoo_saarthi/pages/homescreen_page.dart';
+import 'package:bhoo_saarthi/pages/Buyer/homescreen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

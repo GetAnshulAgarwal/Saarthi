@@ -1,8 +1,5 @@
-import 'package:bhoo_saarthi/pages/crop_request_page.dart';
-import 'package:bhoo_saarthi/pages/homescreen_page.dart';
-import 'package:bhoo_saarthi/pages/marketplace_page.dart'; // Import the MarketplacePage
-import 'package:bhoo_saarthi/pages/payment_history_page.dart'; // Import the PaymentHistoryPage
-import 'package:bhoo_saarthi/pages/onboarding_page.dart'; // Import your OnboardingPage or similar page
+import 'package:bhoo_saarthi/pages/Buyer/homescreen_page.dart';
+import 'package:bhoo_saarthi/onboarding_page.dart'; // Import your OnboardingPage or similar page
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 

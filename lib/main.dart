@@ -1,6 +1,6 @@
+import 'package:bhoo_saarthi/onboarding_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:bhoo_saarthi/pages/onboarding_page.dart'; // Assuming you have an OnboardingPage
 import 'firebase_options.dart'; // Firebase options created by `flutterfire configure`
 
 void main() async {
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bhoo Saarthi',
+    return const MaterialApp(
+      title: 'BhooSaarthi',
       home: OnboardingPage(),
     );
   }
